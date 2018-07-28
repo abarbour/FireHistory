@@ -1,7 +1,12 @@
-Fires_100.xlsx
-fire17_1.zip --> fire17_1.gdb
+(Makefile) downloads:
+* (Fires_100.xlsx), and
+* (fire17_1.zip)
+
+Unzipping (fire17_1.zip) leads to the Geodatabase (fire17_1.gdb)
 
 =================================
+
+Taking a quick peek with GDAL:
 
 ```
 % ogrinfo fire17_1.gdb
@@ -14,10 +19,13 @@ INFO: Open of `fire17_1.gdb'
 
 =================================
 
-From  http://frap.fire.ca.gov/projects/fire_data/fire_perimeters_data_description:
+The official description [1] of these data
+are:
+
+[1]: http://frap.fire.ca.gov/projects/fire_data/fire_perimeters_data_description)
 
 
-# Fire Perimeter Database Description
+## Fire Perimeter Database Description
 
 The Fire Perimeter Database is maintained an an ESRI ArcGIS File Geodatabase. There are three feature classes (data layers) within the GDB. For 2017, these are:
 
