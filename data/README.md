@@ -3,12 +3,14 @@ fire17_1.zip --> fire17_1.gdb
 
 =================================
 
+```
 % ogrinfo fire17_1.gdb
 INFO: Open of `fire17_1.gdb'
       using driver `OpenFileGDB' successful.
 1: Non_FireRX_Legacy13_1 (Multi Polygon)
 2: firep17_1 (Multi Polygon)
 3: rxburn17_1 (Multi Polygon)
+```
 
 =================================
 
