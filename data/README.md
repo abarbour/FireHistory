@@ -26,23 +26,23 @@ Non_FireRX_Legacy13_1: depicting non-prescribed fire fuel reduction projects tha
 
 Fire Perimeters Attribute Table Item Definitions
 
-ITEM NAME		DATA 			TYPEDESCRIPTION				Domain
-----------------	-----------------	-------------------------		------------
-YEAR_			Text			Fire Year				No
-STATE			Text			State					Yes
-AGENCY			Text			Direct protection agency responsible for fire	Yes
-UNIT_ID			Text			ICS code for unit			Yes
-FIRE_NAME		Text			Name of the fire			No
-INC_NUM			Text			Number assigned by the Emergency Command Center of the responsible agency for the fire	No
-ALARM_DATE		Date			Alarm date for fire			No
-CONT_DATE		Date			Containment date for fire		No
-CAUSE			Integer			Reason fire ignited			Yes
-COMMENTS		Text			Miscellaneous comments			No
-REPORT_AC		Number			Estimated area consumed in fire		No
-GIS_ACRES		Number			GIS calculated area in acres		No
-C_METHOD		Integer			Method used to collect perimeter data	Yes
-OBJECTIVE		Integer			Either suppression or resource benefit	Yes
-FIRE_NUM		Text	 		--					No
+|ITEM NAME |DATA |TYPEDESCRIPTION |Domain |
+|--------- |---- |--------------- |------ |
+|YEAR_ | Text | Fire Year | No |
+|STATE | Text | State | Yes |
+|AGENCY | Text | Direct protection agency responsible for fire | Yes |
+|UNIT_ID | Text	 | ICS code for unit | Yes |
+|FIRE_NAME | Text | Name of the fire | No |
+|INC_NUM | Text | Number assigned by the Emergency Command Center of the responsible agency for the fire | No |
+|ALARM_DATE | Date | Alarm date for fire | No |
+|CONT_DATE | Date | Containment date for fire | No |
+|CAUSE | Integer | Reason fire ignited | Yes |
+|COMMENTS | Text | Miscellaneous comments | No |
+|REPORT_AC | Number | Estimated area consumed in fire | No |
+|GIS_ACRES | Number | GIS calculated area in acres | No |
+|C_METHOD | Integer | Method used to collect perimeter data | Yes |
+|OBJECTIVE | Integer | Either suppression or resource benefit | Yes |
+|FIRE_NUM | Text | -- | No |
 
 State Coding:
 Agency ID	Description
