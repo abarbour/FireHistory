@@ -2,54 +2,20 @@
 
 ###
 #	to.R
-#	/Users/abarbour/shakabrah/local.projects/FireHistory/data
+# FireHistory/data
 #	Created by 
 #		/Users/abarbour/bin/ropen ( v. 2.6.6 )
 #	on 
 #		2018:209 (28-July)
 #
-#	[ What this script does, broadly ]
+#	[ Basic operations to test I/O of Geodatabase ]
 #
 ###
-
-## local functions
-#try(source('funcs.R'))
 
 ## libs
 
 library(tools)
-
-#if (!require("pacman")) install.packages("pacman", dependencies=TRUE)
-#pacman::p_load(package1, package2, package_n)
-
-# loads core tidy packages:  ggplot2, tibble, tidyr, readr, purrr, and dplyr
 library(tidyverse)
-#tidyverse_conflicts()
-#tidyverse_update(TRUE)
-
-## local/github libs
-# devtools::install_github("abarbour/kook")
-#library(kook)
-#Set1 <- brew.set1()
-#Set1l <- brew.set1(TRUE)
-#Dark2 <- brew.dark2()
-#Dark2l <- brew.dark2(TRUE)
-#Dark2ll <- brew.dark2(TRUE,TRUE)
-
-#+++++++++++
-
-shake <- FALSE
-redo <- FALSE
-inter <- interactive()
-
-#if (!exists("something") | redo){
-#    fi <- "something.txt"
-#    read.table(fi, header=TRUE) %>% tbl_df -> something
-#    load(fi, verbose=TRUE)
-#}
-
-#+++++++++++
-
 library(rgdal)
 
 # The input file geodatabase
@@ -71,29 +37,52 @@ fc <- readOGR(dsn=fgdb, layer="firep17_1")
 
 # Determine the FC extent, projection, and attribute information
 summary(fc)
+#Object of class SpatialPolygonsDataFrame
+#Coordinates:
+#        min      max
+#x -373237.5 519987.8
+#y -604727.6 518283.7
+#Is projected: TRUE
+#proj4string :
+#[+proj=aea +lat_1=34 +lat_2=40.5 +lat_0=0 +lon_0=-120 +x_0=0
+#+y_0=-4000000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs]
+#Data attributes:
+#    YEAR_              STATE              AGENCY            UNIT_ID
+# Length:20096       Length:20096       Length:20096       Length:20096
+# Class :character   Class :character   Class :character   Class :character
+# Mode  :character   Mode  :character   Mode  :character   Mode  :character
+#
+#  FIRE_NAME           INC_NUM           ALARM_DATE         CONT_DATE
+# Length:20096       Length:20096       Length:20096       Length:20096
+# Class :character   Class :character   Class :character   Class :character
+# Mode  :character   Mode  :character   Mode  :character   Mode  :character
+#
+#     CAUSE          COMMENTS           REPORT_AC        GIS_ACRES
+# Min.   : 1.000   Length:20096       Min.   :     0   Min.   :     0.0
+# 1st Qu.: 4.000   Class :character   1st Qu.:    16   1st Qu.:    33.7
+# Median : 9.000   Mode  :character   Median :    65   Median :   174.6
+# Mean   : 9.266                      Mean   :  2023   Mean   :  1692.6
+# 3rd Qu.:14.000                      3rd Qu.:   375   3rd Qu.:   672.4
+# Max.   :19.000                      Max.   :499945   Max.   :501082.0
+# NA's   :42                          NA's   :12346    NA's   :6
+#
+#    C_METHOD       OBJECTIVE       FIRE_NUM          Shape_Length
+# Min.   :1.000   Min.   :1.000   Length:20096       Min.   :     8.8
+# 1st Qu.:1.000   1st Qu.:1.000   Class :character   1st Qu.:  1757.2
+# Median :6.000   Median :1.000   Mode  :character   Median :  4059.9
+# Mean   :4.821   Mean   :1.013                      Mean   :  8694.1
+# 3rd Qu.:8.000   3rd Qu.:1.000                      3rd Qu.:  8510.8
+# Max.   :8.000   Max.   :2.000                      Max.   :445282.4
+# NA's   :12221   NA's   :195
+#   Shape_Area
+# Min.   :5.000e+00
+# 1st Qu.:1.360e+05
+# Median :7.056e+05
+# Mean   :6.848e+06
+# 3rd Qu.:2.720e+06
+# Max.   :2.028e+09
 
 # View the feature class
-#plot(fc)
+#plot(fc) # this takes a while!
 
 #+++++++++++
-
-#FIG <- function(...){
-#}
-
-#+++++++++++
-
-#shake.fig <- TRUE
-#if (shake.fig & inter){
-#	FIG() 
-#} else {
-#	figfi <- "some_figure"
-#	h <- w <- 7
-#	niceEPS(figfi, h=h, w=w, toPDF=TRUE)
-#	try(FIG())
-#	niceEPS()
-#	nicePNG(figfi, h=h, w=w)
-#	try(FIG())
-#	nicePNG()
-#}
-
-#kook::warn_shake()
