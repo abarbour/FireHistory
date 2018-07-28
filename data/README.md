@@ -56,6 +56,7 @@ summary(fc)
 # 3rd Qu.:14.000                      3rd Qu.:   375   3rd Qu.:   672.4
 # Max.   :19.000                      Max.   :499945   Max.   :501082.0
 # NA's   :42                          NA's   :12346    NA's   :6
+#
 #    C_METHOD       OBJECTIVE       FIRE_NUM          Shape_Length
 # Min.   :1.000   Min.   :1.000   Length:20096       Min.   :     8.8
 # 1st Qu.:1.000   1st Qu.:1.000   Class :character   1st Qu.:  1757.2
@@ -64,6 +65,7 @@ summary(fc)
 # 3rd Qu.:8.000   3rd Qu.:1.000                      3rd Qu.:  8510.8
 # Max.   :8.000   Max.   :2.000                      Max.   :445282.4
 # NA's   :12221   NA's   :195
+#
 #   Shape_Area
 # Min.   :5.000e+00
 # 1st Qu.:1.360e+05
