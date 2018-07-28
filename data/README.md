@@ -1,6 +1,6 @@
 (Makefile) downloads:
 * (Fires_100.xlsx), and
-* [fire17_1.zip]
+* [](fire17_1.zip)
 
 Unzipping (fire17_1.zip) leads to the Geodatabase (fire17_1.gdb)
 
