@@ -1,10 +1,10 @@
-(Makefile) downloads:
-* [Fires_100.xlsx](), and
+[Makefile](Makefile) downloads:
+* [Fires_100.xlsx](Fires_100.xlsx), and
 * fire17_1.zip
 
 Unzipping (fire17_1.zip) leads to the Geodatabase (fire17_1.gdb)
 
-=================================
+-----
 
 Taking a quick peek with GDAL:
 
@@ -17,12 +17,11 @@ INFO: Open of `fire17_1.gdb'
 3: rxburn17_1 (Multi Polygon)
 ```
 
-=================================
+-----
 
 The official description [1] of these data
 are:
 
-[1]: http://frap.fire.ca.gov/projects/fire_data/fire_perimeters_data_description)
 
 
 ## Fire Perimeter Database Description
@@ -129,3 +128,4 @@ The Fire Perimeter Database is maintained an an ESRI ArcGIS File Geodatabase. Th
 
 For unit id codes, download this spreadsheet.
 
+[1]: http://frap.fire.ca.gov/projects/fire_data/fire_perimeters_data_description
