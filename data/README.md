@@ -1,6 +1,6 @@
 [Makefile](Makefile) downloads:
 * [Fires_100.xlsx](Fires_100.xlsx), and
-* fire17_1.zip
+* fire17_1.zip (not tracked here since it's ~35 Mb)
 
 Unzipping (fire17_1.zip) leads to the Geodatabase (fire17_1.gdb)
 
@@ -19,7 +19,7 @@ INFO: Open of `fire17_1.gdb'
 
 -----
 
-The official description [1] of these data
+The official description<sup>[1]</sup> of these data
 are:
 
 
