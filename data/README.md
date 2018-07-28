@@ -17,11 +17,11 @@ INFO: Open of `fire17_1.gdb'
 3: rxburn17_1 (Multi Polygon)
 ```
 
-Then in `R`:
-```{r}
+In [R](https://www.r-project.org/), for example, we can then access the `.gdb` directory:
+```r
 library(rgdal)
-fgdb <- "./fire17_1.gdb"
-fc <- readOGR(dsn=fgdb, layer="firep17_1")
+
+fc <- readOGR(dsn="./fire17_1.gdb", layer="firep17_1")
 # OGR data source with driver: OpenFileGDB
 #  Source: "[...]/FireHistory/data/fire17_1.gdb", layer: "firep17_1"
 # with 20096 features
