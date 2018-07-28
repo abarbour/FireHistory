@@ -1,3 +1,10 @@
+|Extent | File | Metadata | Release  | Date | Projection | Format | Size (MB) |
+|------ | ---- | -------- | -------  | ---- | ---------- | ------ | --------- |
+|Statewide |	
+(fire17_1.zip)[http://frap.fire.ca.gov/data/statewide/fire17_1.zip] |
+(metadata)[http://frap.fire.ca.gov/data/statewide/FGDC_metadata/fire17_1_metadata.xml] | 2018 | California Teale Albers - NAD83 | Geodatabase | 36 |
+|Statewide | (Fires_100.xlsx)[http://frap.fire.ca.gov/data/statewide/Fires_100.xlsx] | N/A | 2018 | N/A | Table | 2.6|
+
 [Makefile](Makefile) downloads:
 * [Fires_100.xlsx](Fires_100.xlsx), and
 * fire17_1.zip (not tracked here since it's ~35 Mb)
