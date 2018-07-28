@@ -15,16 +15,17 @@ INFO: Open of `fire17_1.gdb'
 From  http://frap.fire.ca.gov/projects/fire_data/fire_perimeters_data_description:
 
 
-Fire Perimeter Database Description
+# Fire Perimeter Database Description
+
 The Fire Perimeter Database is maintained an an ESRI ArcGIS File Geodatabase. There are three feature classes (data layers) within the GDB. For 2017, these are:
 
-firep17_1: depicting wildfire perimeters from contributing agencies current as 2017;
+* firep17_1: depicting wildfire perimeters from contributing agencies current as 2017;
 
-rxburn17_1: depicting prescribed fires supplied from contributing agencies current as 2017;;
+* rxburn17_1: depicting prescribed fires supplied from contributing agencies current as 2017;;
 
-Non_FireRX_Legacy13_1: depicting non-prescribed fire fuel reduction projects that were initially included in the database. Fuels reduction projects that are non prescribed fire are no longer included.
+* Non_FireRX_Legacy13_1: depicting non-prescribed fire fuel reduction projects that were initially included in the database. Fuels reduction projects that are non prescribed fire are no longer included.
 
-Fire Perimeters Attribute Table Item Definitions
+## Fire Perimeters Attribute Table Item Definitions
 
 |ITEM NAME |DATA |TYPEDESCRIPTION |Domain |
 |--------- |---- |--------------- |------ |
@@ -44,66 +45,77 @@ Fire Perimeters Attribute Table Item Definitions
 |OBJECTIVE | Integer | Either suppression or resource benefit | Yes |
 |FIRE_NUM | Text | -- | No |
 
-State Coding:
-Agency ID	Description
-CA	California
-NV	Nevada
-OR	Oregon
-AZ	Arizona
+## State Coding
 
-Agency Coding:
-Agency	Description
-BIA	USDI Bureau of Indian Affairs
-BLM	Bureau of Land Management
-CDF	California Department of Forestry and Fire Protection
-CCO	Contract Counties
-DOD	Department of Defense
-FWS	USDI Fish and Wildlife Service
-LRA	Local Response Area
-NOP	No Protection
-NPS	National Park Service
-PVT	Private
-USF	United States Forest Service
-OTH	Other
+|Agency ID | Description |
+|--------- |------------ |
+|CA | California |
+|NV | Nevada |
+|OR | Oregon |
+|AZ | Arizona |
 
-Cause coding:
-Cause Code	Description
-1	Lightning
-2	Equipment Use
-3	Smoking
-4	Campfire
-5	Debris
-6	Railroad
-7	Arson
-8	Playing with Fire
-9	Miscellaneous
-10	Vehicle
-11	Power Line
-12	Firefighter Training
-13	Non-Firefighter Training
-14	Unknown/Unidentified
-15	Structure
-16	Aircraft
-17	Volcanic
-18	Escaped Prescribed Burn
-19	Illegal Alien Campfire
+## Agency Coding
 
-Collection Method coding:
-Cause Code	Description
-1	GPS Ground
-2	GPS Air
-3	Infrared
-4	Other Imagery
-5	Photo Interpretation
-6	Hand Drawn
-7	Mixed Collection Methods
-8	Unknown
+|Agency |Description |
+|------ |----------- |
+|BIA | USDI Bureau of Indian Affairs|
+|BLM | Bureau of Land Management|
+|CDF | California Department of Forestry and Fire Protection|
+|CCO | Contract Counties|
+|DOD | Department of Defense|
+|FWS | USDI Fish and Wildlife Service|
+|LRA | Local Response Area|
+|NOP | No Protection|
+|NPS | National Park Service|
+|PVT | Private|
+|USF | United States Forest Service|
+|OTH | Other|
 
-Objective coding:
-Cause Code	Description
-1	Suppression (Wildfire)
-2	Resource Benefit (WFU)
+## Cause coding
 
-UNIT ID coding:
+|Cause Code |Description |
+|---------- |----------- |
+|1 | Lightning|
+|2 | Equipment Use|
+|3 | Smoking|
+|4 | Campfire|
+|5 | Debris|
+|6 | Railroad|
+|7 | Arson|
+|8 | Playing with Fire|
+|9 | Miscellaneous|
+|10 | Vehicle|
+|11 | Power Line|
+|12 | Firefighter Training|
+|13 | Non-Firefighter Training|
+|14 | Unknown/Unidentified|
+|15 | Structure|
+|16 | Aircraft|
+|17 | Volcanic|
+|18 | Escaped Prescribed Burn|
+|19 | Illegal Alien Campfire|
+
+## Collection Method coding
+
+|Cause Code |Description |
+|---------- |----------- |
+|1 | GPS Ground|
+|2 | GPS Air|
+|3 | Infrared|
+|4 | Other Imagery|
+|5 | Photo Interpretation|
+|6 | Hand Drawn|
+|7 | Mixed Collection Methods|
+|8 | Unknown|
+
+## Objective coding
+
+|Cause Code |Description |
+|---------- |----------- |
+|1 | Suppression (Wildfire)|
+|2 | Resource Benefit (WFU)|
+
+## UNIT ID coding
+
 For unit id codes, download this spreadsheet.
 
