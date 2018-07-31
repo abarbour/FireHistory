@@ -15,6 +15,7 @@
 library(tools)
 library(tidyverse)
 library(rgdal)
+library(sp)
 
 # The input file geodatabase
 fgdb <- "./fire17_1.gdb"
@@ -31,7 +32,8 @@ print(fc_list)
 #[1] 3
 
 # Read the feature class
-fc <- readOGR(dsn=fgdb, layer="firep17_1")
+reload <- FALSE
+if (!exists('fc') | reload) fc <- readOGR(dsn=fgdb, layer="firep17_1")
 
 # Determine the FC extent, projection, and attribute information
 summary(fc)
@@ -84,3 +86,24 @@ summary(fc)
 #plot(fc) # this takes a while!
 
 #+++++++++++
+
+# > str(fc,2)
+# Formal class 'SpatialPolygonsDataFrame' [package "sp"] with 5 slots
+#   ..@ data       :'data.frame':	20096 obs. of  17 variables:
+#   ..@ polygons   :List of 20096
+#   ..@ plotOrder  : int [1:20096] 10195 17383 19930 15181 17730 277 13009 10128 11441 16464 ...
+#   ..@ bbox       : num [1:2, 1:2] -373238 -604728 519988 518284
+#   .. ..- attr(*, "dimnames")=List of 2
+#   ..@ proj4string:Formal class 'CRS' [package "sp"] with 1 slot
+
+fc@data %>% tbl_df %>% 
+	dplyr::mutate(Year = as.numeric(YEAR_),
+		ALARM_DATE = gsub("2106", "2016", ALARM_DATE),
+		Alarm = as.Date(ALARM_DATE),
+		Contained = as.Date(CONT_DATE)) -> Dat
+
+par(las=1)
+plot(GIS_ACRES/sd(GIS_ACRES, na.rm=TRUE) ~ Alarm, Dat)
+
+GRTo::bvmed(lis=log10(na.omit(Dat$GIS_ACRES)))
+
