@@ -103,7 +103,13 @@ fc@data %>% tbl_df %>%
 		Contained = as.Date(CONT_DATE)) -> Dat
 
 par(las=1)
-plot(GIS_ACRES/sd(GIS_ACRES, na.rm=TRUE) ~ Alarm, Dat)
+plot(GIS_ACRES/sd(GIS_ACRES, na.rm=TRUE) ~ Alarm, Dat, log='y')
 
-GRTo::bvmed(lis=log10(na.omit(Dat$GIS_ACRES)))
+	
+plot(rank(GIS_ACRES, ties.method="random") ~ Alarm, Dat) #, log='y')
+
+with(Dat, smoothScatter(Year, log2(GIS_ACRES), nbin=32))
+
+redo.bval <- FALSE
+if (redo.bval | !exists('bval')) bval <- GRTo::bvmed(lis=log10(na.omit(Dat$GIS_ACRES)))
 
